@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  gunicorn:
+    build: .
+    container_name: gunicorn
+    expose:
+      - "8000"
+    volumes:
+      - .:/app
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-container
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./static:/app/static  # Make sure static files are mapped correctly
+    depends_on:
+      - app

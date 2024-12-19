@@ -1,0 +1,52 @@
+# Django migrations
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Database files
+db.sqlite3
+
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__
+
+# Virtual environment
+.env/
+venv/
+ENV/
+
+# Django secret key file
+*.env
+
+# Media files
+/media/
+
+# Static files
+/static/
+
+# Log files
+*.log
+
+# Coverage reports
+.coverage
+*.coveragerc
+
+# IDE configurations (e.g., VS Code, PyCharm)
+.vscode/
+.idea/
+
+# Django extensions (celery logs, etc.)
+celerybeat-schedule
+
+# Reports and docs (if generated)
+docs/_build/
+
+# Django admin uploads
+*.swp
+
+# Configuration files
+*.json
+*.csv
+
+# .env file for sensitive credentials (Optional, if you use one)
+.env
