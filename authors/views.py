@@ -43,5 +43,5 @@ def manage_author_id(request, id):
 @api_view(['GET'])
 def index_page(request):
     return Response({
-        "message": "Welcome to Library Management System! Please go to /docs for usage."
+        "message": "Welcome to Library Management System! Please go to /doc for usage."
     })

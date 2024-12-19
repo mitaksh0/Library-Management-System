@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: library-management-system  # Replace with your app name
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py migrate  # Run migrations
+      python manage.py collectstatic --noinput  # Collect static files
+    startCommand: gunicorn --workers 3 --bind 0.0.0.0:10000 library_management_system.wsgi:application
